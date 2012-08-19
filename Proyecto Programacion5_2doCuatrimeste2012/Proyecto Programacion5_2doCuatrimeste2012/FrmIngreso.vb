@@ -5,6 +5,7 @@ Public Class FrmIngreso
     'Dim cDemo As New SqlConnection
     ''Dim cODBC As New Odbc.OdbcConnection
     'Dim strConexion As String = "Data Source=localhost;Initial Catalog=DBACTIVOS;Integrated Security=True"
+    'conexion a database'
     Dim intentos As Integer
 
     Private Sub BttnAceptar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BttnAceptar.Click
