@@ -4,6 +4,7 @@ Imports System.Text
 
 Module MdlMD5
     Function getMd5Hash(ByVal input As String) As String
+        Dim tmp, Clave As String
         ' Create a new instance of the MD5 object.
         Dim md5Hasher As MD5 = MD5.Create()
 
@@ -22,7 +23,14 @@ Module MdlMD5
         Next i
 
         ' Return the hexadecimal string.
-        Return sBuilder.ToString()
+        tmp = sBuilder.ToString()
+
+        Clave = ""
+        For i = 0 To tmp.Length - 1
+            Clave = tmp(i) + Clave
+        Next
+
+        Return Clave
     End Function
 
 End Module

@@ -35,7 +35,7 @@ Partial Class FrmIngreso
         '
         'BttnAceptar
         '
-        Me.BttnAceptar.Location = New System.Drawing.Point(130, 79)
+        Me.BttnAceptar.Location = New System.Drawing.Point(130, 70)
         Me.BttnAceptar.Name = "BttnAceptar"
         Me.BttnAceptar.Size = New System.Drawing.Size(75, 23)
         Me.BttnAceptar.TabIndex = 12
@@ -44,7 +44,7 @@ Partial Class FrmIngreso
         '
         'BttnSalir
         '
-        Me.BttnSalir.Location = New System.Drawing.Point(11, 79)
+        Me.BttnSalir.Location = New System.Drawing.Point(11, 70)
         Me.BttnSalir.Name = "BttnSalir"
         Me.BttnSalir.Size = New System.Drawing.Size(75, 23)
         Me.BttnSalir.TabIndex = 11
@@ -53,7 +53,7 @@ Partial Class FrmIngreso
         '
         'txtClave
         '
-        Me.txtClave.Location = New System.Drawing.Point(60, 53)
+        Me.txtClave.Location = New System.Drawing.Point(60, 44)
         Me.txtClave.Name = "txtClave"
         Me.txtClave.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtClave.Size = New System.Drawing.Size(145, 20)
@@ -62,7 +62,7 @@ Partial Class FrmIngreso
         'lblClave
         '
         Me.lblClave.AutoSize = True
-        Me.lblClave.Location = New System.Drawing.Point(8, 56)
+        Me.lblClave.Location = New System.Drawing.Point(8, 47)
         Me.lblClave.Name = "lblClave"
         Me.lblClave.Size = New System.Drawing.Size(37, 13)
         Me.lblClave.TabIndex = 9
@@ -70,7 +70,7 @@ Partial Class FrmIngreso
         '
         'txtUsuario
         '
-        Me.txtUsuario.Location = New System.Drawing.Point(60, 27)
+        Me.txtUsuario.Location = New System.Drawing.Point(60, 18)
         Me.txtUsuario.Name = "txtUsuario"
         Me.txtUsuario.Size = New System.Drawing.Size(145, 20)
         Me.txtUsuario.TabIndex = 8
@@ -83,6 +83,7 @@ Partial Class FrmIngreso
         Me.MenuStrip1.Size = New System.Drawing.Size(217, 24)
         Me.MenuStrip1.TabIndex = 13
         Me.MenuStrip1.Text = "MenuStrip1"
+        Me.MenuStrip1.Visible = False
         '
         'NuevoUsuarioToolStripMenuItem
         '
@@ -93,7 +94,7 @@ Partial Class FrmIngreso
         'lblUsuario
         '
         Me.lblUsuario.AutoSize = True
-        Me.lblUsuario.Location = New System.Drawing.Point(8, 30)
+        Me.lblUsuario.Location = New System.Drawing.Point(8, 21)
         Me.lblUsuario.Name = "lblUsuario"
         Me.lblUsuario.Size = New System.Drawing.Size(46, 13)
         Me.lblUsuario.TabIndex = 7
@@ -115,7 +116,7 @@ Partial Class FrmIngreso
         Me.MinimizeBox = False
         Me.Name = "FrmIngreso"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "FrmIngreso"
+        Me.Text = "Control de Ingreso"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
