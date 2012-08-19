@@ -60,6 +60,9 @@ Public Class FrmArticulo
             Cambios = False
             Nuevo = False
 
+            txtCodArt.Focus()
+            txtCodArt.SelectAll()
+
             'MessageBox.Show("Artículo insertado", "QUITAR MENSAJE", MessageBoxButtons.OK)
         Catch ex As SqlException
             cTransa.Rollback()
@@ -224,6 +227,7 @@ Public Class FrmArticulo
             If dstipo.Tables(0).Rows.Count > 0 Then
                 txtDescUM.Text = dstipo.Tables(0).Rows(0).Item("descripcion")
             Else
+                MessageBox.Show("Código de unidad de medida inválido")
                 txtCodUM.Clear()
             End If
 
@@ -377,7 +381,9 @@ Public Class FrmArticulo
                 Desp = True
             Else
                 bnClear.PerformClick()
+                bnFirst.Enabled = False
             End If
+
         Catch ex As SqlException
             MessageBox.Show("Codigo de error(" & ex.ErrorCode & "): " & ex.Message, "Primer Artículo", MessageBoxButtons.OK)
         Finally

@@ -319,6 +319,7 @@ Partial Class FrmArticulo
         Me.txtCostPromAnt.ReadOnly = True
         Me.txtCostPromAnt.Size = New System.Drawing.Size(95, 20)
         Me.txtCostPromAnt.TabIndex = 52
+        Me.txtCostPromAnt.TabStop = False
         Me.txtCostPromAnt.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'txtCostPromAct
@@ -329,6 +330,7 @@ Partial Class FrmArticulo
         Me.txtCostPromAct.ReadOnly = True
         Me.txtCostPromAct.Size = New System.Drawing.Size(95, 20)
         Me.txtCostPromAct.TabIndex = 53
+        Me.txtCostPromAct.TabStop = False
         Me.txtCostPromAct.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'txtCostUltEntAct
@@ -339,6 +341,7 @@ Partial Class FrmArticulo
         Me.txtCostUltEntAct.ReadOnly = True
         Me.txtCostUltEntAct.Size = New System.Drawing.Size(95, 20)
         Me.txtCostUltEntAct.TabIndex = 55
+        Me.txtCostUltEntAct.TabStop = False
         Me.txtCostUltEntAct.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'txtCostUltEntAnt
@@ -349,6 +352,7 @@ Partial Class FrmArticulo
         Me.txtCostUltEntAnt.ReadOnly = True
         Me.txtCostUltEntAnt.Size = New System.Drawing.Size(95, 20)
         Me.txtCostUltEntAnt.TabIndex = 54
+        Me.txtCostUltEntAnt.TabStop = False
         Me.txtCostUltEntAnt.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'txtIV

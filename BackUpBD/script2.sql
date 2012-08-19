@@ -20,6 +20,7 @@ drop procedure sp_Bloquea_Usuario;
 drop procedure sp_Modificar_Clave_Usuario;
 drop procedure sp_Verificar_Usuario_Bloqueado;
 drop procedure sp_Verificar_Usuario;
+drop procedure sp_Incluir_Cuenta;
 
 
 --Drops table
@@ -569,7 +570,21 @@ END
 GO
 
 
-
+USE [ENERTROL] 
+GO
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE sp_Incluir_Cuenta
+ @User_name  varchar(20),
+ @Clave   varchar(20)
+AS
+BEGIN
+ SET NOCOUNT ON;
+ INSERT INTO ENERTROL.dbo.USUARIO VALUES(@User_name, 'normal' ,@Clave, 0,0,0,0)
+END
+GO
 
  
 ------*************************------------------
