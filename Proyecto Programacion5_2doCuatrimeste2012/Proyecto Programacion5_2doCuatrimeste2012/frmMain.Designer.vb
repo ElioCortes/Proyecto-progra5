@@ -29,11 +29,12 @@ Partial Class frmMain
         Me.TablasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UnidadesDeMedidaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SeguridadToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.HerramientasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UsuarioToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ModificarCuentaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EiminarCuentaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HerramientasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CrearCuentaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -56,7 +57,7 @@ Partial Class frmMain
         'ArticulosToolStripMenuItem
         '
         Me.ArticulosToolStripMenuItem.Name = "ArticulosToolStripMenuItem"
-        Me.ArticulosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ArticulosToolStripMenuItem.Size = New System.Drawing.Size(121, 22)
         Me.ArticulosToolStripMenuItem.Text = "&Artículos"
         '
         'ReportesToolStripMenuItem
@@ -85,21 +86,9 @@ Partial Class frmMain
         Me.SeguridadToolStripMenuItem.Size = New System.Drawing.Size(72, 20)
         Me.SeguridadToolStripMenuItem.Text = "&Seguridad"
         '
-        'HerramientasToolStripMenuItem
-        '
-        Me.HerramientasToolStripMenuItem.Name = "HerramientasToolStripMenuItem"
-        Me.HerramientasToolStripMenuItem.Size = New System.Drawing.Size(90, 20)
-        Me.HerramientasToolStripMenuItem.Text = "&Herramientas"
-        '
-        'SalirToolStripMenuItem
-        '
-        Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
-        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(41, 20)
-        Me.SalirToolStripMenuItem.Text = "&Salir"
-        '
         'UsuarioToolStripMenuItem1
         '
-        Me.UsuarioToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ModificarCuentaToolStripMenuItem, Me.EiminarCuentaToolStripMenuItem})
+        Me.UsuarioToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ModificarCuentaToolStripMenuItem, Me.EiminarCuentaToolStripMenuItem, Me.CrearCuentaToolStripMenuItem})
         Me.UsuarioToolStripMenuItem1.Name = "UsuarioToolStripMenuItem1"
         Me.UsuarioToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
         Me.UsuarioToolStripMenuItem1.Text = "&Usuario"
@@ -115,6 +104,24 @@ Partial Class frmMain
         Me.EiminarCuentaToolStripMenuItem.Name = "EiminarCuentaToolStripMenuItem"
         Me.EiminarCuentaToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
         Me.EiminarCuentaToolStripMenuItem.Text = "&Eiminar cuenta"
+        '
+        'HerramientasToolStripMenuItem
+        '
+        Me.HerramientasToolStripMenuItem.Name = "HerramientasToolStripMenuItem"
+        Me.HerramientasToolStripMenuItem.Size = New System.Drawing.Size(90, 20)
+        Me.HerramientasToolStripMenuItem.Text = "&Herramientas"
+        '
+        'SalirToolStripMenuItem
+        '
+        Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
+        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(41, 20)
+        Me.SalirToolStripMenuItem.Text = "&Salir"
+        '
+        'CrearCuentaToolStripMenuItem
+        '
+        Me.CrearCuentaToolStripMenuItem.Name = "CrearCuentaToolStripMenuItem"
+        Me.CrearCuentaToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.CrearCuentaToolStripMenuItem.Text = "&Crear cuenta"
         '
         'frmMain
         '
@@ -144,4 +151,5 @@ Partial Class frmMain
     Friend WithEvents UsuarioToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ModificarCuentaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents EiminarCuentaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents CrearCuentaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

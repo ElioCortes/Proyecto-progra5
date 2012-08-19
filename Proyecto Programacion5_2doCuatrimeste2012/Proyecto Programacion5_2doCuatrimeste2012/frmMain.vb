@@ -24,4 +24,12 @@
     Private Sub ModificarCuentaToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         FrmCambioContraseña.Show()
     End Sub
+
+    Private Sub CrearCuentaToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles CrearCuentaToolStripMenuItem.Click
+        FrmNuevoUsuario.Show()
+    End Sub
+
+    Private Sub TerminarSesiónToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs)
+
+    End Sub
 End Class

@@ -54,10 +54,14 @@
             If (Not confirmarNuevaContraseña()) Then
                 MessageBox.Show("Error: las contraseñas no concuerdan", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Else
+
+                Dim mds_clave As ClssMD5
+                mds_clave = New ClssMD5
+
                 Dim claveEnc = txtContraseñaActual.Text
                 Dim claveEnc2 = txtNuevaContraseña.Text
-                claveEnc = MdlMD5.getMd5Hash(claveEnc)
-                claveEnc2 = MdlMD5.getMd5Hash(claveEnc2)
+                claveEnc = mds_clave.getMd5Hash(claveEnc)
+                claveEnc2 = mds_clave.getMd5Hash(claveEnc2)
                 MdlLogueoUsuario.ModificarClave(txtUsuario.Text, claveEnc, claveEnc2)
             End If
         End If

@@ -465,4 +465,8 @@ Public Class frmUnidadMedida
             End If
         End If
     End Sub
+
+    Private Sub bNavigator_RefreshItems(sender As System.Object, e As System.EventArgs) Handles bNavigator.RefreshItems
+
+    End Sub
 End Class

@@ -5,7 +5,7 @@ Module MdlLogueoUsuario
 
     Dim cDemo As New SqlConnection
     'Dim cODBC As New Odbc.OdbcConnection
-    Dim strConexion As String = "Data Source=localhost;Initial Catalog=dbactivos2;Integrated Security=True"
+    Dim strConexion As String = "Data Source=Juan07-PC\SQLEXPRESS;Initial Catalog=ENERTROL;Integrated Security=True"
 
     Public Function consultar_clave(ByVal claveEnc As String, ByVal usuario As String, ByRef intentos As Integer) As Boolean
         Dim cmdtipo As New SqlCommand
@@ -31,6 +31,7 @@ Module MdlLogueoUsuario
 
         If dstipo.Tables(0).Rows.Count > 0 Then
             clave = dstipo.Tables(0).Rows(0).Item("clave")
+            MessageBox.Show(clave & " - " & claveEnc)
             If (clave = claveEnc) Then
                 MessageBox.Show("Logueo satisfactorio", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 Return True
@@ -51,6 +52,7 @@ Module MdlLogueoUsuario
             End If
         Else
             MessageBox.Show("El usuario no existe", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return False
         End If
         cDemo.Close()
     End Function
@@ -131,7 +133,10 @@ Module MdlLogueoUsuario
         usuario = Trim(usuario)
         clave = Trim(clave)
 
-        clave = MdlMD5.getMd5Hash(clave)
+        Dim mds_clave As ClssMD5
+        mds_clave = New ClssMD5
+
+        clave = mds_clave.getMd5Hash(clave)
 
         cDemo.ConnectionString = strConexion
         cDemo.Open()
@@ -193,4 +198,5 @@ Module MdlLogueoUsuario
         cDemo.Close()
 
     End Sub
+
 End Module
