@@ -95,6 +95,13 @@ Namespace My.Resources
             End Get
         End Property
         
+        Friend ReadOnly Property enertrol() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("enertrol", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
         Friend ReadOnly Property icon_save() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("icon_save", resourceCulture)

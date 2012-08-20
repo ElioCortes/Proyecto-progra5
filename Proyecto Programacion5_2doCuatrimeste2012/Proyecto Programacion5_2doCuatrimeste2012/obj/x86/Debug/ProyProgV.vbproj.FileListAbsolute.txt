@@ -1,0 +1,23 @@
+C:\Proyecto-progra5\ProyProgV\Proyecto Programacion5_2doCuatrimeste2012\bin\Debug\Proyecto Programacion5_2doCuatrimeste2012.exe.config
+C:\Proyecto-progra5\ProyProgV\Proyecto Programacion5_2doCuatrimeste2012\bin\Debug\Proyecto Programacion5_2doCuatrimeste2012.exe
+C:\Proyecto-progra5\ProyProgV\Proyecto Programacion5_2doCuatrimeste2012\bin\Debug\Proyecto Programacion5_2doCuatrimeste2012.pdb
+C:\Proyecto-progra5\ProyProgV\Proyecto Programacion5_2doCuatrimeste2012\bin\Debug\Proyecto Programacion5_2doCuatrimeste2012.xml
+C:\Proyecto-progra5\ProyProgV\Proyecto Programacion5_2doCuatrimeste2012\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Proyecto-progra5\ProyProgV\Proyecto Programacion5_2doCuatrimeste2012\obj\x86\Debug\Proyecto_Programacion5_2doCuatrimeste2012.FrmArticulo.resources
+C:\Proyecto-progra5\ProyProgV\Proyecto Programacion5_2doCuatrimeste2012\obj\x86\Debug\Proyecto_Programacion5_2doCuatrimeste2012.FrmCambioContraseña.resources
+C:\Proyecto-progra5\ProyProgV\Proyecto Programacion5_2doCuatrimeste2012\obj\x86\Debug\Proyecto_Programacion5_2doCuatrimeste2012.FrmCliente.resources
+C:\Proyecto-progra5\ProyProgV\Proyecto Programacion5_2doCuatrimeste2012\obj\x86\Debug\Proyecto_Programacion5_2doCuatrimeste2012.FrmDepartamento.resources
+C:\Proyecto-progra5\ProyProgV\Proyecto Programacion5_2doCuatrimeste2012\obj\x86\Debug\Proyecto_Programacion5_2doCuatrimeste2012.FrmEmpleado.resources
+C:\Proyecto-progra5\ProyProgV\Proyecto Programacion5_2doCuatrimeste2012\obj\x86\Debug\Proyecto_Programacion5_2doCuatrimeste2012.FrmIngreso.resources
+C:\Proyecto-progra5\ProyProgV\Proyecto Programacion5_2doCuatrimeste2012\obj\x86\Debug\Proyecto_Programacion5_2doCuatrimeste2012.frmMain.resources
+C:\Proyecto-progra5\ProyProgV\Proyecto Programacion5_2doCuatrimeste2012\obj\x86\Debug\Proyecto_Programacion5_2doCuatrimeste2012.FrmNuevoUsuario.resources
+C:\Proyecto-progra5\ProyProgV\Proyecto Programacion5_2doCuatrimeste2012\obj\x86\Debug\Proyecto_Programacion5_2doCuatrimeste2012.FrmPuesto.resources
+C:\Proyecto-progra5\ProyProgV\Proyecto Programacion5_2doCuatrimeste2012\obj\x86\Debug\Proyecto_Programacion5_2doCuatrimeste2012.frmUnidadMedida.resources
+C:\Proyecto-progra5\ProyProgV\Proyecto Programacion5_2doCuatrimeste2012\obj\x86\Debug\Proyecto_Programacion5_2doCuatrimeste2012.Resources.resources
+C:\Proyecto-progra5\ProyProgV\Proyecto Programacion5_2doCuatrimeste2012\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Proyecto-progra5\ProyProgV\Proyecto Programacion5_2doCuatrimeste2012\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Proyecto-progra5\ProyProgV\Proyecto Programacion5_2doCuatrimeste2012\obj\x86\Debug\Proyecto Programacion5_2doCuatrimeste2012.exe
+C:\Proyecto-progra5\ProyProgV\Proyecto Programacion5_2doCuatrimeste2012\obj\x86\Debug\Proyecto Programacion5_2doCuatrimeste2012.xml
+C:\Proyecto-progra5\ProyProgV\Proyecto Programacion5_2doCuatrimeste2012\obj\x86\Debug\Proyecto Programacion5_2doCuatrimeste2012.pdb
+C:\Proyecto-progra5\ProyProgV\Proyecto Programacion5_2doCuatrimeste2012\obj\x86\Debug\Proyecto_Programacion5_2doCuatrimeste2012.frmBodega.resources
+C:\Proyecto-progra5\ProyProgV\Proyecto Programacion5_2doCuatrimeste2012\obj\x86\Debug\Proyecto_Programacion5_2doCuatrimeste2012.frmConsUM.resources

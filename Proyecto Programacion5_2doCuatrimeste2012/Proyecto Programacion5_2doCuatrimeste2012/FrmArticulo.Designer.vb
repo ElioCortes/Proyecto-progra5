@@ -117,7 +117,7 @@ Partial Class FrmArticulo
         Me.dtpUltEnt.Location = New System.Drawing.Point(87, 146)
         Me.dtpUltEnt.Name = "dtpUltEnt"
         Me.dtpUltEnt.Size = New System.Drawing.Size(96, 20)
-        Me.dtpUltEnt.TabIndex = 6
+        Me.dtpUltEnt.TabIndex = 5
         '
         'dtpUltSalida
         '
@@ -125,16 +125,16 @@ Partial Class FrmArticulo
         Me.dtpUltSalida.Location = New System.Drawing.Point(197, 146)
         Me.dtpUltSalida.Name = "dtpUltSalida"
         Me.dtpUltSalida.Size = New System.Drawing.Size(106, 20)
-        Me.dtpUltSalida.TabIndex = 7
+        Me.dtpUltSalida.TabIndex = 6
         '
         'Label7
         '
         Me.Label7.AutoSize = True
         Me.Label7.Location = New System.Drawing.Point(194, 130)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(97, 13)
+        Me.Label7.Size = New System.Drawing.Size(100, 13)
         Me.Label7.TabIndex = 12
-        Me.Label7.Text = "fecha ultima salida:"
+        Me.Label7.Text = "Fecha ultima salida:"
         '
         'Label8
         '
@@ -360,7 +360,7 @@ Partial Class FrmArticulo
         Me.txtIV.Location = New System.Drawing.Point(15, 146)
         Me.txtIV.Name = "txtIV"
         Me.txtIV.Size = New System.Drawing.Size(63, 20)
-        Me.txtIV.TabIndex = 56
+        Me.txtIV.TabIndex = 4
         Me.txtIV.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'FrmArticulo

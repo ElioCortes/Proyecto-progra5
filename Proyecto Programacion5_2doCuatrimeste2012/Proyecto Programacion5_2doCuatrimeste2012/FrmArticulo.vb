@@ -10,7 +10,6 @@ Public Class FrmArticulo
     Dim Cambios, Nuevo As New Boolean
     Dim cDemo As New SqlConnection
     Dim cTransa As SqlTransaction
-    Dim strconexion As String = "Data Source=ELROND;Initial Catalog=ENERTROL;Integrated Security=True"
 
     Private Sub bnAdd_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles bnAdd.Click
         Dim cmdtipo As New SqlCommand
@@ -128,7 +127,7 @@ Public Class FrmArticulo
         txtDescArt.Clear()
         txtCodUM.Clear()
         txtDescUM.Clear()
-        txtIV.Text = Format(0.0, "##.00")
+        txtIV.Text = "0.00"
         txtCostPromAct.Text = "0.00"
         txtCostPromAnt.Text = "0.00"
         txtCostUltEntAct.Text = "0.00"
@@ -628,5 +627,29 @@ Public Class FrmArticulo
 
     Private Sub txtCodUM_Validating(ByVal sender As System.Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles txtCodUM.Validating
         Desp_UMDesc()
+    End Sub
+
+    Private Sub txtCodUM_KeyUp(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles txtCodUM.KeyUp
+        If e.KeyData = Keys.F9 Then
+            Try
+
+                '    frmConsUM ConsUM = new frmConsUM();
+
+                '        ConsUM.ShowDialog();
+
+
+
+                'If (ConsUM.Selecciona) Then
+
+
+
+                'End If
+
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+            Finally
+
+            End Try
+        End If
     End Sub
 End Class

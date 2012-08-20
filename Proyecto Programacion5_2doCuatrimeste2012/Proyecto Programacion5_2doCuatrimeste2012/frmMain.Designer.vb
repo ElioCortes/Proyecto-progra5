@@ -32,10 +32,13 @@ Partial Class frmMain
         Me.UsuarioToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ModificarCuentaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EiminarCuentaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CrearCuentaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HerramientasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CrearCuentaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.BodegasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -43,7 +46,7 @@ Partial Class frmMain
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DatosToolStripMenuItem, Me.ReportesToolStripMenuItem, Me.TablasToolStripMenuItem, Me.SeguridadToolStripMenuItem, Me.HerramientasToolStripMenuItem, Me.SalirToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(569, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(479, 24)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -57,7 +60,7 @@ Partial Class frmMain
         'ArticulosToolStripMenuItem
         '
         Me.ArticulosToolStripMenuItem.Name = "ArticulosToolStripMenuItem"
-        Me.ArticulosToolStripMenuItem.Size = New System.Drawing.Size(121, 22)
+        Me.ArticulosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ArticulosToolStripMenuItem.Text = "&Artículos"
         '
         'ReportesToolStripMenuItem
@@ -68,7 +71,7 @@ Partial Class frmMain
         '
         'TablasToolStripMenuItem
         '
-        Me.TablasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UnidadesDeMedidaToolStripMenuItem})
+        Me.TablasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UnidadesDeMedidaToolStripMenuItem, Me.BodegasToolStripMenuItem})
         Me.TablasToolStripMenuItem.Name = "TablasToolStripMenuItem"
         Me.TablasToolStripMenuItem.Size = New System.Drawing.Size(53, 20)
         Me.TablasToolStripMenuItem.Text = "&Tablas"
@@ -90,7 +93,7 @@ Partial Class frmMain
         '
         Me.UsuarioToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ModificarCuentaToolStripMenuItem, Me.EiminarCuentaToolStripMenuItem, Me.CrearCuentaToolStripMenuItem})
         Me.UsuarioToolStripMenuItem1.Name = "UsuarioToolStripMenuItem1"
-        Me.UsuarioToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.UsuarioToolStripMenuItem1.Size = New System.Drawing.Size(114, 22)
         Me.UsuarioToolStripMenuItem1.Text = "&Usuario"
         '
         'ModificarCuentaToolStripMenuItem
@@ -105,6 +108,12 @@ Partial Class frmMain
         Me.EiminarCuentaToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
         Me.EiminarCuentaToolStripMenuItem.Text = "&Eiminar cuenta"
         '
+        'CrearCuentaToolStripMenuItem
+        '
+        Me.CrearCuentaToolStripMenuItem.Name = "CrearCuentaToolStripMenuItem"
+        Me.CrearCuentaToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.CrearCuentaToolStripMenuItem.Text = "&Crear cuenta"
+        '
         'HerramientasToolStripMenuItem
         '
         Me.HerramientasToolStripMenuItem.Name = "HerramientasToolStripMenuItem"
@@ -117,17 +126,28 @@ Partial Class frmMain
         Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(41, 20)
         Me.SalirToolStripMenuItem.Text = "&Salir"
         '
-        'CrearCuentaToolStripMenuItem
+        'PictureBox1
         '
-        Me.CrearCuentaToolStripMenuItem.Name = "CrearCuentaToolStripMenuItem"
-        Me.CrearCuentaToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
-        Me.CrearCuentaToolStripMenuItem.Text = "&Crear cuenta"
+        Me.PictureBox1.Image = Global.Proyecto_Programacion5_2doCuatrimeste2012.My.Resources.Resources.enertrol
+        Me.PictureBox1.Location = New System.Drawing.Point(121, 81)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(215, 86)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 1
+        Me.PictureBox1.TabStop = False
+        '
+        'BodegasToolStripMenuItem
+        '
+        Me.BodegasToolStripMenuItem.Name = "BodegasToolStripMenuItem"
+        Me.BodegasToolStripMenuItem.Size = New System.Drawing.Size(182, 22)
+        Me.BodegasToolStripMenuItem.Text = "&Bodegas"
         '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(569, 269)
+        Me.ClientSize = New System.Drawing.Size(479, 241)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "frmMain"
@@ -135,6 +155,7 @@ Partial Class frmMain
         Me.Text = "ENERTROL S.A."
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -152,4 +173,6 @@ Partial Class frmMain
     Friend WithEvents ModificarCuentaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents EiminarCuentaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents CrearCuentaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents BodegasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

@@ -11,7 +11,7 @@ Public Class FrmIngreso
     Private Sub BttnAceptar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BttnAceptar.Click
         Dim claveEnc, usuario As String
         claveEnc = Trim(txtClave.Text)
-        usuario = Trim(txtUsuario.Text)
+        usuario = UCase(Trim(txtUsuario.Text))
 
         Dim mds_clave As ClssMD5
         mds_clave = New ClssMD5

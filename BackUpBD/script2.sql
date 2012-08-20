@@ -5,22 +5,33 @@ drop trigger tr_inserta_articulo;
 drop trigger tr_inserta_bodega;
 
 --Drop Procedures
+--Articulos
 drop procedure sp_Inserta_Articulo;
 drop procedure sp_Elimina_Articulo;
 drop procedure sp_Modificar_Articulo; 
 drop procedure sp_Consulta_Todos_Articulos; 
 drop procedure sp_Consulta_Articulo;
+--Unidad de Medida
 drop procedure sp_Inserta_Unidad_Medida;
 drop procedure sp_Elimina_Unidad_Medida;
 drop procedure sp_Modificar_Unidad_Medida;
 drop procedure sp_Consulta_Todas_Unidades_Medida;
 drop procedure sp_Consulta_Unidad_Medida;
+--Crea Saldo Bodegas-Articulos
 drop procedure sp_Crea_Saldo;
+--Usuario
 drop procedure sp_Bloquea_Usuario;
 drop procedure sp_Modificar_Clave_Usuario;
 drop procedure sp_Verificar_Usuario_Bloqueado;
 drop procedure sp_Verificar_Usuario;
 drop procedure sp_Incluir_Cuenta;
+--Bodegas
+drop procedure sp_Inserta_Bodega;
+drop procedure sp_Elimina_Bodega;
+drop procedure sp_Modificar_Bodega; 
+drop procedure sp_Consulta_Todas_Bodegas; 
+drop procedure sp_Consulta_Bodega;
+--Empleado
 
 
 --Drops table
@@ -244,7 +255,7 @@ CREATE TABLE Puesto(
 CREATE TABLE USUARIO(
 	nombre VARCHAR (20) NOT NULL , 
 	descripcion VARCHAR(40) NOT NULL,
-    clave VARCHAR (20) NOT NULL , 
+    clave VARCHAR (60) NOT NULL , 
     rol_operario BIT NOT NULL , 
     rol_administrativo BIT NOT NULL , 
     rol_contable BIT NOT NULL , 
@@ -290,7 +301,6 @@ BEGIN
    )
 END
 GO
-
 
 
 USE [ENERTROL]
@@ -346,8 +356,7 @@ where
 END
 GO
     
-    
-    
+        
 USE [ENERTROL]
 GO
 SET ANSI_NULLS ON
@@ -361,7 +370,6 @@ BEGIN
    select * from articulo;
 END; 
 GO
-
 
 
 USE [ENERTROL]
@@ -381,7 +389,6 @@ BEGIN
 	where codigo_articulo = @codigo_articulo
 END
 GO
-
 
 
 USE [ENERTROL]
@@ -586,6 +593,95 @@ BEGIN
 END
 GO
 
+
+USE [ENERTROL]
+GO
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE sp_Inserta_Bodega 
+	@codigo_bodega varchar(3),
+	@descripcion varchar(30)
+AS
+BEGIN
+   insert into Bodega values(
+    @codigo_bodega,
+	@descripcion
+   )
+END
+GO
+
+
+USE [ENERTROL]
+GO
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE sp_Elimina_Bodega
+	@codigo_bodega varchar(25)
+AS
+BEGIN
+   delete from Bodega where 
+      codigo_bodega = @codigo_bodega
+END
+GO
+
+
+USE [ENERTROL]
+GO
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO    
+CREATE PROCEDURE sp_Modificar_Bodega
+    @codigo_bodega varchar(3),
+	@descripcion varchar(30)
+AS
+BEGIN
+update Bodega
+	   set codigo_bodega = @codigo_bodega,
+	       descripcion = @descripcion	       			
+where 
+      codigo_bodega = @codigo_bodega;
+END
+GO
+  
+
+USE [ENERTROL]
+GO
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO        
+CREATE PROCEDURE sp_Consulta_Todas_Bodegas
+AS
+BEGIN
+   select * from Bodega;
+END
+GO
+   
+
+USE [ENERTROL]
+GO
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE sp_Consulta_Bodega
+	@codigo_bodega varchar(3)
+AS
+BEGIN
+	select * from Bodega
+	where codigo_bodega = @codigo_bodega
+END
+GO
+
+
+
+
+
  
 ------*************************------------------
 --TRIGGERS--
@@ -596,35 +692,31 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 Create TRIGGER tr_inserta_articulo
-ON Articulo
-FOR INSERT
-AS
+	ON Articulo
+	FOR INSERT
+	AS
 BEGIN
+	SET NOCOUNT ON;
 
-SET NOCOUNT ON;
+	DECLARE @mi_bod VARCHAR(3)   
+	DECLARE @mi_art VARCHAR(25)
 
-DECLARE @mi_bod VARCHAR(3)   
-DECLARE @mi_art VARCHAR(25)
+	select @mi_art=i.codigo_articulo from inserted i;	
 
-select @mi_art=i.codigo_articulo from inserted i;	
+	DECLARE mi_cursor CURSOR FOR  
+	SELECT codigo_bodega FROM Bodega
 
-DECLARE mi_cursor CURSOR FOR  
-SELECT codigo_bodega FROM Bodega
+	OPEN mi_cursor  
+	FETCH NEXT FROM mi_cursor INTO @mi_bod
 
-OPEN mi_cursor  
-FETCH NEXT FROM mi_cursor INTO @mi_bod
-
-WHILE @@FETCH_STATUS = 0  
-BEGIN  
-  exec sp_Crea_Saldo 0.0, 0.0, 0.0, @mi_art,@mi_bod;
---  INSERT INTO Saldo (codigo_articulo,codigo_bodega,entradas,salidas,saldo_anterior) 
---  VALUES (@mi_art,@mi_bod,0,0,0); 
-  FETCH NEXT FROM mi_cursor INTO @mi_bod  
-END  
-
-CLOSE mi_cursor 
-DEALLOCATE mi_cursor
-
+	WHILE @@FETCH_STATUS = 0  
+	BEGIN  
+		exec sp_Crea_Saldo 0.0, 0.0, 0.0, @mi_art,@mi_bod;
+		FETCH NEXT FROM mi_cursor INTO @mi_bod  
+	END  
+	
+	CLOSE mi_cursor 
+	DEALLOCATE mi_cursor
 END
 GO
 
@@ -658,8 +750,6 @@ FETCH NEXT FROM mi_cursor INTO @mi_art
 WHILE @@FETCH_STATUS = 0  
 BEGIN  
   exec sp_Crea_Saldo 0.0, 0.0, 0.0, @mi_art,@mi_bod;
---  INSERT INTO Saldo (codigo_articulo,codigo_bodega,entradas,salidas,saldo_anterior) 
---  VALUES (@mi_art,@mi_bod,0,0,0); 
   FETCH NEXT FROM mi_cursor INTO @mi_art  
 END  
 
@@ -700,3 +790,5 @@ exec sp_Inserta_Articulo '003','cero tres',13,'07-31-2012','07-31-2012',100,90,1
 
 
 insert into Bodega values('004','Bodega 004');
+
+insert into USUARIO values('SUPERVISOR','Supervisor de Sistema','0369ae5ad5cb9361d13daba296054c7f',0,1,0,0);

@@ -7,7 +7,6 @@ Public Class frmUnidadMedida
     Dim Cambios, Nuevo As New Boolean
     Dim cDemo As New SqlConnection
     Dim cTransa As SqlTransaction
-    Dim strconexion As String = "Data Source=ELROND;Initial Catalog=ENERTROL;Integrated Security=True"
 
     Private Sub bnClear_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles bnClear.Click
         txtCodigo.Clear()
@@ -23,44 +22,6 @@ Public Class frmUnidadMedida
     Private Sub frmUnidadMedida_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         bnFirst.Enabled = True
         bnFirst.PerformClick()
-
-        'Dim cmdtipo As New SqlCommand
-        'Dim datipo As SqlDataAdapter
-        'Dim dstipo As New DataSet
-
-        'bnClear.PerformClick()
-
-        'Try
-        '    cDemo.ConnectionString = strconexion
-        '    cDemo.Open()
-
-        '    With cmdtipo
-        '        .Connection = cDemo
-        '        .CommandText = "sp_Consulta_Todas_Unidades_Medida"
-        '        .CommandType = CommandType.StoredProcedure
-        '    End With
-
-        '    datipo = New SqlDataAdapter
-        '    datipo.SelectCommand = cmdtipo
-        '    datipo.Fill(dstipo, "CONSULTAUNIDADESMEDIDAS")
-
-        '    If dstipo.Tables(0).Rows.Count > 0 Then
-        '        txtCodigo.Text = dstipo.Tables(0).Rows(0).Item("codigo_unidad_medida")
-        '        txtDescUM.Text = dstipo.Tables(0).Rows(0).Item("descripcion")
-        '        bnFirst.Enabled = True
-        '        bnPrev.Enabled = True
-        '        bnNext.Enabled = True
-        '        bnLast.Enabled = True
-        '        bnNext.Enabled = True
-        '        bnRefresh.Enabled = True
-        '        bnDelete.Enabled = True
-        '        Cambios = False
-        '    End If
-        'Catch ex As SqlException
-        '    MessageBox.Show("Codigo de error(" & ex.ErrorCode & "): " & ex.Message, "Insercion de Unidades de Medida", MessageBoxButtons.OK)
-        'Finally
-        '    cDemo.Close()
-        'End Try
 
     End Sub
 
@@ -93,8 +54,10 @@ Public Class frmUnidadMedida
             bnAdd.Enabled = True
             Cambios = False
             Nuevo = False
+            txtCodigo.Focus()
+            txtCodigo.SelectAll()
 
-            MessageBox.Show("Unidad de Medida insertada", "QUITAR MENSAJE", MessageBoxButtons.OK)
+            '  MessageBox.Show("Unidad de Medida insertada", "QUITAR MENSAJE", MessageBoxButtons.OK)
         Catch ex As SqlException
             cTransa.Rollback()
             MessageBox.Show("Codigo de error(" & ex.ErrorCode & "): " & ex.Message, "Insercion de Unidades de Medida", MessageBoxButtons.OK)
@@ -280,6 +243,7 @@ Public Class frmUnidadMedida
                 bnDelete.Enabled = True
                 Cambios = False
             Else
+                bnFirst.Enabled = False
                 bnClear.PerformClick()
             End If
         Catch ex As SqlException
@@ -464,9 +428,5 @@ Public Class frmUnidadMedida
                 bnSave.PerformClick()
             End If
         End If
-    End Sub
-
-    Private Sub bNavigator_RefreshItems(sender As System.Object, e As System.EventArgs) Handles bNavigator.RefreshItems
-
     End Sub
 End Class

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Proyecto Programacion5_2doCuatrimeste2012", "Proyecto Programacion5_2doCuatrimeste2012\Proyecto Programacion5_2doCuatrimeste2012.vbproj", "{EAB85614-725D-4CE6-8341-CE411372CCA0}"
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ProyProgV", "Proyecto Programacion5_2doCuatrimeste2012\ProyProgV.vbproj", "{EAB85614-725D-4CE6-8341-CE411372CCA0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
